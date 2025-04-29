@@ -1,41 +1,48 @@
-# 💼 Bank Customer Churn Prediction
+# 📈 Customer Churn Prediction - Machine Learning Project
 
-This machine learning project uses real bank customer data to predict customer churn using Logistic Regression, Random Forest, and XGBoost.
+This project builds and evaluates machine learning models to predict customer churn in a bank dataset.  
+We compare the performance of Logistic Regression, Random Forest, and XGBoost models using 5-Fold Cross-Validation.
 
-## 🔧 Tools Used
+---
+
+## 📂 Project Files
+
+- `churn_prediction.ipynb` — Full Jupyter Notebook including:
+  - Data loading and cleaning
+  - Feature encoding
+  - Cross-validation based model comparison
+  - ROC curve comparison for all models
+  - Feature importance analysis using XGBoost
+  - Final project conclusion
+- `Bank Churn Modelling.csv` — Input dataset (optional, if needed separately)
+
+---
+
+## 🧠 Techniques Used
+
+- Data Preprocessing
+- Label Encoding
+- Feature Scaling (StandardScaler for Logistic Regression)
+- 5-Fold Cross-Validation
+- ROC Curve and AUC Analysis
+- Feature Importance (XGBoost)
+- Model Comparison: Logistic Regression, Random Forest, XGBoost
+
+---
+
+## 📊 Key Results
+
+- **Random Forest** and **XGBoost** models achieved an average cross-validation accuracy of ~85%-86%.
+- **Feature Importance** showed that **Age**, **Estimated Salary**, and **Credit Score** were the top predictors for churn.
+- **ROC Curve Analysis** highlighted that XGBoost delivered a strong AUC score.
+
+---
+
+## 🚀 Tools and Libraries
 
 - Python
+- Jupyter Notebook
 - Pandas
 - Scikit-learn
 - XGBoost
-- Matplotlib, Seaborn
-
-## 📊 Models Compared
-
-- Logistic Regression
-- Random Forest Classifier
-- XGBoost Classifier
-
-## ✅ Results
-
-| Model              | Accuracy | Recall (Churn) |
-|-------------------|----------|----------------|
-| Logistic Regression | 81.1%     | 0.20           |
-| Random Forest       | 86.9%     | 0.48           |
-| XGBoost             | 86.5%     | 0.50           |
-
-## 📈 Visualizations
-
-- ROC Curve Comparison
-- XGBoost Feature Importance
-
-## 📌 Key Insights
-
-- Age, Balance, and Activity Level are strong churn indicators.
-- XGBoost provided the best balance between precision and recall.
-
-## 📁 Project Files
-
-- `churn_prediction.ipynb` - Full ML code
-- `churn_modeling.csv` - Dataset
-- `README.md` - Project documentation
+- Matplotlib
